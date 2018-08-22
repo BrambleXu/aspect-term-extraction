@@ -16,5 +16,4 @@ save_train = Path.cwd().joinpath('data/semeval-2016/train.csv')
 train_data.to_csv(save_train, index=False)
 
 save_test = Path.cwd().joinpath('data/semeval-2016/test.csv')
-test_data.to_csv(save_test, index=False
-
+test_data.to_csv(save_test, index=False)
