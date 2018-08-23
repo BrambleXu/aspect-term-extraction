@@ -78,3 +78,5 @@ glove.6B/
 20_newsgroup
 
 twitter/
+### Ignore glove floder
+embedding_weights/
