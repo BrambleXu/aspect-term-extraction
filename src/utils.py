@@ -128,3 +128,20 @@ class SentenceGetter(object):
             return s
         except:
             return None
+
+
+def df2data(df):
+    """Read data and labels from dataframe
+    Input:
+        df: three columns, ['Sentence #', 'Tag', 'Word']
+    Output:
+        data: datasize * ['EU', 'rejects', 'German', 'call', 'to', 'boycott', 'British', 'lamb', '.']
+        label: datasize * ['B-ORG', 'O', 'B-MISC', 'O', 'O', 'O', 'B-MISC', 'O', 'O']
+    """
+    agg_func = lambda s: [(w, t) for w, t in zip(s["Word"].values.tolist(),
+                                                 s["Tag"].values.tolist())]
+    grouped = df.groupby("Sentence #").apply(agg_func)
+    data = [[w[0] for w in s] for s in grouped]
+    label = [[w[1] for w in s] for s in grouped]
+
+    return data, label
