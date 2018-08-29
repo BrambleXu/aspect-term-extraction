@@ -70,13 +70,3 @@ target/
 
 .idea/
 .DS_Store
-
-### Ignore glove floder
-glove.6B/
-
-### Ignore 20_newsgroup data floder
-20_newsgroup
-
-twitter/
-### Ignore glove floder
-embedding_weights/
