@@ -70,3 +70,9 @@ target/
 
 .idea/
 .DS_Store
+
+### Ignore glove floder
+# ignore files in folder foo
+embedding_weights/*
+# but keep the folder
+!embedding_weights/.gitkeep
